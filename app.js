@@ -8,9 +8,9 @@ const authenticateToken = require("./middleware/auth");
 const app = express();
 const port = process.env.PORT || 3001;
 
-// Connect to MongoDB
+// Connect to MongoDB remote
 mongoose
-  .connect("mongodb://localhost:27017/languageLearningDB", {
+  .connect("mongodb://localhost:27017/languageLearningDB", { //connection
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
